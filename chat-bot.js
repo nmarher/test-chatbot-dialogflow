@@ -69,9 +69,10 @@ $(function () {
        var u = new SpeechSynthesisUtterance();
        u.text = message;
        u.lang = 'en-US';
-       u.rate = 1.2;
+       u.rate = 1;
        u.onend = function(event) { alert('Finished in ' + event.elapsedTime + ' seconds.'); }
        speechSynthesis.speak(u);
+       $('#chat-submit').trigger('click');
        //speechSynthesis.speak(new SpeechSynthesisUtterance(message));
     }
 
