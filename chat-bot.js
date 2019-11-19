@@ -65,7 +65,14 @@ $(function () {
     }
 
     function speechMessage(message) {
-       speechSynthesis.speak(new SpeechSynthesisUtterance(message));
+
+       var u = new SpeechSynthesisUtterance();
+       u.text = message;
+       u.lang = 'en-US';
+       u.rate = 1.2;
+       u.onend = function(event) { alert('Finished in ' + event.elapsedTime + ' seconds.'); }
+       speechSynthesis.speak(u);
+       //speechSynthesis.speak(new SpeechSynthesisUtterance(message));
     }
 
     var dialogFlowSuccessResponse = function (data) {
