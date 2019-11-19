@@ -70,10 +70,11 @@ $(function () {
        u.text = message;
        u.lang = 'en-US';
        u.rate = 1;
-       u.onend = function(event) { alert('Finished in ' + event.elapsedTime + ' seconds.'); }
+       u.onend = function(event) {
+            $('#mic').click();
+            alert('Finished in ' + event.elapsedTime + ' seconds.'); 
+        }
        speechSynthesis.speak(u);
-       $('#mic').click();
-       //speechSynthesis.speak(new SpeechSynthesisUtterance(message));
     }
 
     var dialogFlowSuccessResponse = function (data) {
