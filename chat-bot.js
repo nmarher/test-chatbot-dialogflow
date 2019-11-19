@@ -72,7 +72,6 @@ $(function () {
        u.rate = 1;
        u.onend = function(event) {
             $('#mic').click();
-            alert('Finished in ' + event.elapsedTime + ' seconds.'); 
         }
        speechSynthesis.speak(u);
     }
