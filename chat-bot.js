@@ -72,14 +72,14 @@ $(function () {
         $("#loading").hide();
         enableInput();
         generateMessage(data.result.fulfillment.speech, 'bot');
-        speechMessage(message);
+        speechMessage(data.result.fulfillment.speech);
     };
 
     var dialogFlowErrorResponse = function (data) {
         $("#loading").hide();
         disableInput();
         generateMessage(data.status.errorType, 'bot');
-        speechMessage(message);
+        speechMessage(data.status.errorType);
     };
 
     var enableInput = function () {
