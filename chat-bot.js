@@ -72,7 +72,7 @@ $(function () {
        u.rate = 1;
        u.onend = function(event) { alert('Finished in ' + event.elapsedTime + ' seconds.'); }
        speechSynthesis.speak(u);
-       $('#chat-submit').trigger('click');
+       $('#mic').click();
        //speechSynthesis.speak(new SpeechSynthesisUtterance(message));
     }
 
