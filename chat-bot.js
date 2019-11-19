@@ -64,16 +64,22 @@ $(function () {
         });
     }
 
+    function speechMessage(message) {
+       speechSynthesis.speak(new SpeechSynthesisUtterance(message));
+    }
+
     var dialogFlowSuccessResponse = function (data) {
         $("#loading").hide();
         enableInput();
         generateMessage(data.result.fulfillment.speech, 'bot');
+        speechMessage(message);
     };
 
     var dialogFlowErrorResponse = function (data) {
         $("#loading").hide();
         disableInput();
         generateMessage(data.status.errorType, 'bot');
+        speechMessage(message);
     };
 
     var enableInput = function () {
