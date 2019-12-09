@@ -3,7 +3,7 @@ $(function () {
     var recognition;
     var uniqueSessionId;
     var dialogflowUrl = "https://api.dialogflow.com/v1/";
-    var dialogflowAccessToken = "8293a024b2c04204aa245ba031aa87b2";
+    var dialogflowAccessToken = "23a55cf201914bf0beb1c37a7d79384c";
 
     var initializeSession = function () {
         $(".chat-logs").empty();
