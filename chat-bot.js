@@ -56,7 +56,7 @@ $(function () {
             },
             data: JSON.stringify({
                 query: message,
-                lang: "en",
+                lang: "es",
                 sessionId: uniqueSessionId
             }),
             success: dialogFlowSuccessResponse,
