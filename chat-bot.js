@@ -68,7 +68,7 @@ $(function () {
 
        var u = new SpeechSynthesisUtterance();
        u.text = message;
-       u.lang = 'es-ES';
+       u.lang = 'en-US';
        u.rate = 1;
        u.onend = function(event) {
             $('#mic').click();
